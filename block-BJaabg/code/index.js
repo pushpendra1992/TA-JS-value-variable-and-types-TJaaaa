@@ -26,4 +26,5 @@ amount += amount * 0.08;
 amount = amount.toFixed(2)
 console.log(amount);
 (bank_balance > amount) ? alert("you can afford it"): alert("you can not afford it")
+
 // ⛑ Answer of the above will `$334.76`.

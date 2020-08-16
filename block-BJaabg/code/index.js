@@ -13,15 +13,17 @@ const ACCESSORY_PRICE = 9.99;
 
 var bank_balance = 303.91;
 var amount = 0;
+let bank_amount = bank_balance;
 
-
-for (let i = 0; bank_balance > 0; i++) {
+for (let i = 1; bank_balance > PHONE_PRICE; i++) {
     bank_balance -= PHONE_PRICE;
     amount += PHONE_PRICE;
-    while (SPENDING_THRESHOLD >= amount) {
+    if (SPENDING_THRESHOLD >= amount) {
         amount += ACCESSORY_PRICE;
     }
 }
-amount = amount.toFixed(2);
-
+amount += amount * 0.08;
+amount = amount.toFixed(2)
+console.log(amount);
+(bank_balance > amount) ? alert("you can afford it"): alert("you can not afford it")
 // ⛑ Answer of the above will `$334.76`.

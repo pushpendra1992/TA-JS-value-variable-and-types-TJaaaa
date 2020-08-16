@@ -6,6 +6,7 @@
  * [ ] Finally, check the amount against your bank account balance to see if you can afford it or not.
 */
 
+const SPENDING_THRESHOLD = 200;
 const TAX_RATE = 0.08;
 const PHONE_PRICE = 99.99;
 const ACCESSORY_PRICE = 9.99;
@@ -13,15 +14,14 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 
-for (let i = 1; bank_balance >= PHONE_PRICE; i++) {
+
+for (let i = 0; bank_balance > 0; i++) {
     bank_balance -= PHONE_PRICE;
     amount += PHONE_PRICE;
-    if (SPENDING_THRESHOLD >= amount) {
+    while (SPENDING_THRESHOLD >= amount) {
         amount += ACCESSORY_PRICE;
     }
 }
-amount += amount * 0.08;
-amount = amount.toFixed(2)
-console.log(amount);
+amount = amount.toFixed(2);
 
 // ⛑ Answer of the above will `$334.76`.

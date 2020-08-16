@@ -23,8 +23,7 @@ for (let i = 1; bank_balance > PHONE_PRICE; i++) {
     }
 }
 amount += amount * 0.08;
-amount = amount.toFixed(2)
-console.log(amount);
+amount = amount.toFixed(2);
 (bank_balance > amount) ? alert("you can afford it"): alert("you can not afford it")
 
 // ⛑ Answer of the above will `$334.76`.

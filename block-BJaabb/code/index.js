@@ -69,6 +69,7 @@ Example:
 "hello", -21; // false
 
 */
+
 let num1 = prompt("Enter first number to compare");
 let num2 = prompt("Enter second number to compare");
 num1 = Number(num1);

@@ -69,22 +69,12 @@ Example:
 "hello", -21; // false
 
 */
+
 let num1 = prompt("Enter first number to compare");
-if (num1 == "true" || num1 == "false")
-    alert("Enter a valid value");
-else if (num1 == "null" || num1 == "undefined")
-    alert("Enter a valid value");
-else if (num1 == "NaN")
-    alert("Enter a valid value");
-
 let num2 = prompt("Enter second number to compare");
-if (num2 == "true" || num2 == "false")
-    alert("Enter a valid value");
-else if (num2 == "null" || num2 == "undefined")
-    alert("Enter a valid value");
-else if (num2 == "NaN")
-    alert("Enter a valid value");
-
 num1 = Number(num1);
 num2 = Number(num2);
-(num1 === num2) ? alert("Equal"): alert("Not Equal");
+if (isNaN(num1) || isNaN(num2))
+    alert(`Enter a valid value`)
+else
+    (num1 === num2) ? alert("Equal") : alert("Not Equal");
